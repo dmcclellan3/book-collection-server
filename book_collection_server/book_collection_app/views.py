@@ -31,4 +31,6 @@ def create_user(request):
     profile.save()
     profile_serialized = UserProfileSerializer(profile)
     return Response(profile_serialized.data)
+
+    
     
