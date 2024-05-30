@@ -7,6 +7,7 @@ class Book(models.Model):
     genre = models.ManyToManyField('Genre')
     summary = models.TextField()
     publish_date = models.DateField()
+    user = models.ForeignKey('UserProfile', on_delete=models.CASCADE)
 
     def __str__(self):
         return self.title

@@ -17,9 +17,8 @@ def get_profile(request):
 @api_view(['POST'])
 @permission_classes([])
 def create_user(request):
-    user = User.objects.create(
+    user = UserProfile.objects.create(
         username = request.data['username'],
-        password = request.data['password']
     )   
     user.set_password(request.data['password'])
     user.save()
