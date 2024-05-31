@@ -23,10 +23,10 @@ from book_collection_app.views import *
 from rest_framework import routers
 router = routers.DefaultRouter()
 
-router.register(r'Book', BookViewSet)
-router.register(r'Genre', GenreViewSet)
-router.register(r'Author', AuthorViewSet)
-router.register(r'UserProfile', UserProfileViewSet)
+router.register(r'books', BookViewSet)
+router.register(r'genre', GenreViewSet)
+router.register(r'author', AuthorViewSet)
+router.register(r'user-profile', UserProfileViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
